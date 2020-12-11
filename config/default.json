@@ -1,0 +1,5 @@
+{
+   "localport": 5000,
+   "jwtSecret": "kartashov egor mern",
+   "mongoDBUri": "mongodb://localhost:27017/Users"
+}
