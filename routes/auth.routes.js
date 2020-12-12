@@ -16,6 +16,7 @@ router.post(
     ],
     async (req, res) => {
         try{
+            console.log("Body: ", req.body);
             const errors = validationResult(req)
 
             if (!errors.isEmpty()){
@@ -24,6 +25,7 @@ router.post(
                     message: "Incorrect reg data"
                 })
             }
+            
             const { email, password } = req.body
 
             const condidate = await User.findOne({ email })
