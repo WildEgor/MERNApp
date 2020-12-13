@@ -56,6 +56,7 @@ const AuthPage = props => {
                                 id="email" 
                                 type="email" 
                                 name="email"
+                                value={ form.email }
                                 className="yellow-input"
                                 onChange={ changeHandler }
                             />
@@ -68,6 +69,7 @@ const AuthPage = props => {
                                 id="password" 
                                 type="password" 
                                 name="password"
+                                value={ form.password }
                                 className="yellow-input"
                                 onChange={ changeHandler }
                             />
