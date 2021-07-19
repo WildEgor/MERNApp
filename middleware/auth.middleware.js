@@ -11,14 +11,14 @@ const auth = (req, res, next) => {
         console.log('Token = ', token);
 
         if(!token)
-            return res.status(401).josn({ message: 'No auth' })  
+            return res.status(401).json({ message: 'No auth' })  
         
         const decoded = jwt.verify(token, config.get('jwtSecret'))
         req.user = decoded
         next()
         
     } catch (error) {
-        return res.status(401).josn({ message: 'No auth' })  
+        return res.status(401).json({ message: 'No auth' })  
     }
 }
 
